@@ -11,5 +11,5 @@ export default async function getProducts(req, res){
         data.push({...doc.data()})
     })
 
-    return res.status(200).json(data).end()
+    return res.status(200).json(data)
 }
