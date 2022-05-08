@@ -2,16 +2,11 @@ import Image from 'next/image'
 
 const Card = ({ item }) => {    
 
-    console.log(item)
-
     return (
         <>
-            <div className='card position-relative' style={{width: '20rem'}}>
+            <div className='card position-relative' style={{width: '20rem', height: '30rem'}}>
                 <p className='name-label'>{item.name}</p>
-                <Image  src={`/${item?.image}`} alt='...' width={800}
-                        height={900}
-                        layout='responsive'
-                        priority={false} />
+                <Image  src={`/${item?.image}`} alt='...' layout='fill' priority={true} />
                 <div className='card-body text-end'>
                     <h4 className='card-text'>{item.price} $</h4>
                 </div>
